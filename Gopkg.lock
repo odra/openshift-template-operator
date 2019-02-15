@@ -83,6 +83,30 @@
   version = "v0.18.0"
 
 [[projects]]
+  name = "github.com/gobuffalo/envy"
+  packages = ["."]
+  revision = "fa0dfdc10b5366ce365b7d9d1755a03e4e797bc5"
+  version = "v1.6.15"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/gobuffalo/packd"
+  packages = ["."]
+  revision = "eca3b8fd66872a76119b189bbe0f58f776a2a39f"
+
+[[projects]]
+  name = "github.com/gobuffalo/packr"
+  packages = ["."]
+  revision = "e4e6ba15091f5e9be7e8e9989e57a71fd545bf7e"
+  version = "v1.22.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/gobuffalo/syncx"
+  packages = ["."]
+  revision = "558ac7de985fc4f4057bff27c7bdf99e92fe0750"
+
+[[projects]]
   name = "github.com/gogo/protobuf"
   packages = [
     "proto",
@@ -168,6 +192,22 @@
   version = "v0.3.7"
 
 [[projects]]
+  branch = "process-param"
+  name = "github.com/integr8ly/operator-sdk-openshift-utils"
+  packages = [
+    "pkg/api/kubernetes",
+    "pkg/api/schemes",
+    "pkg/api/template"
+  ]
+  revision = "7fc49e8893ffa323256f352ffbdee59973394e90"
+
+[[projects]]
+  name = "github.com/joho/godotenv"
+  packages = ["."]
+  revision = "23d116af351c84513e1946b527c88823e476be13"
+  version = "v1.3.0"
+
+[[projects]]
   name = "github.com/json-iterator/go"
   packages = ["."]
   revision = "1624edc4454b8682399def8740d46db5e4362ba4"
@@ -208,6 +248,22 @@
   version = "1.0.1"
 
 [[projects]]
+  branch = "release-3.11"
+  name = "github.com/openshift/api"
+  packages = [
+    "apps/v1",
+    "authorization/v1",
+    "build/v1",
+    "image/docker10",
+    "image/dockerpre012",
+    "image/v1",
+    "pkg/serialization",
+    "route/v1",
+    "template/v1"
+  ]
+  revision = "5ad8479f64f1b60ee9c62ce8ef1fe6638838725e"
+
+[[projects]]
   name = "github.com/operator-framework/operator-sdk"
   packages = [
     "pkg/k8sutil",
@@ -234,6 +290,12 @@
   packages = ["."]
   revision = "5f041e8faa004a95c88a202771f4cc3e991971e6"
   version = "v2.0.1"
+
+[[projects]]
+  name = "github.com/pkg/errors"
+  packages = ["."]
+  revision = "ba968bfe8b2f7e042a574c888954fccecfa385b4"
+  version = "v0.8.1"
 
 [[projects]]
   name = "github.com/prometheus/client_golang"
@@ -271,6 +333,16 @@
     "xfs"
   ]
   revision = "f8d8b3f739bd91a7c0462cb55235ef63c79c9abc"
+
+[[projects]]
+  name = "github.com/rogpeppe/go-internal"
+  packages = [
+    "modfile",
+    "module",
+    "semver"
+  ]
+  revision = "1cf9852c553c5b7da2d5a4a091129a7822fed0c9"
+  version = "v1.2.2"
 
 [[projects]]
   name = "github.com/spf13/pflag"
@@ -574,7 +646,8 @@
     "util/homedir",
     "util/integer",
     "util/jsonpath",
-    "util/retry"
+    "util/retry",
+    "util/workqueue"
   ]
   revision = "d082d5923d3cc0bfbb066ee5fbdea3d0ca79acf8"
 
@@ -650,15 +723,26 @@
     "pkg/client",
     "pkg/client/apiutil",
     "pkg/client/config",
+    "pkg/controller",
+    "pkg/controller/controllerutil",
+    "pkg/event",
+    "pkg/handler",
+    "pkg/internal/controller",
+    "pkg/internal/controller/metrics",
     "pkg/internal/recorder",
     "pkg/leaderelection",
     "pkg/manager",
     "pkg/metrics",
     "pkg/patch",
+    "pkg/predicate",
+    "pkg/reconcile",
     "pkg/recorder",
     "pkg/runtime/inject",
     "pkg/runtime/log",
+    "pkg/runtime/scheme",
     "pkg/runtime/signals",
+    "pkg/source",
+    "pkg/source/internal",
     "pkg/webhook/admission",
     "pkg/webhook/admission/types",
     "pkg/webhook/types"
@@ -669,6 +753,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "8b68702a7d700de9e7791bec954e0d497bc77f5718ea25f50153031c00bc0bd7"
+  inputs-digest = "cf6ea31512adebacc3a96ed953fb5403190b1e982941ebb57f3277a3620adde6"
   solver-name = "gps-cdcl"
   solver-version = 1

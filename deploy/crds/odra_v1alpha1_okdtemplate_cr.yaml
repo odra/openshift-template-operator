@@ -1,0 +1,14 @@
+apiVersion: odra.org/v1alpha1
+kind: OKDTemplate
+metadata:
+  name: example-okdtemplate
+spec:
+  source:
+    local: webapp/latest.yaml
+    #remote: ''
+  parameters:
+    OPENSHIFT_OAUTHCLIENT_ID: 'webapp'
+    OPENSHIFT_HOST: ''
+    SSO_ROUTE: ''
+    WEBAPP_IMAGE: 'quay.io/integreatly/tutorial-web-app'
+    WEBAPP_IMAGE_TAG: latest

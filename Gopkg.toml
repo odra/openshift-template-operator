@@ -49,6 +49,22 @@ required = [
   # branch = "master" #osdk_branch_annotation
   version = "=v0.4.0" #osdk_version_annotation
 
+[[constraint]]
+  name = "github.com/openshift/api"
+  branch = "release-s3.11"
+
+[[constraint]]
+  branch = "release-3.11"
+  name = "github.com/openshift/client-go"
+
+[[constraint]]
+  name = "github.com/integr8ly/operator-sdk-openshift-utils"
+  branch = "process-param"
+
+[[constraint]]
+  name = "github.com/gobuffalo/packr"
+  version = "1.19.0"
+
 [prune]
   go-tests = true
   non-go = true
